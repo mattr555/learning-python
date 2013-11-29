@@ -75,6 +75,16 @@ You can put strings together (called concatenation) with the `+` operator.
 'Hi, World'
 ```
 
+Finally, you can get the length of a string using the `len()` function. We'll go over how functions work later. For now, know that functions work by taking an input (called an argument) inside the parentheses. For the `len()` function, the input is a string.
+
+```python
+>>> len('hello')
+5
+>>> pie = "I like pie"
+>>> len(pie)
+10
+```
+
 So this is cool, but what if you want to write a program and save it?
 
 Writing Programs
@@ -82,7 +92,7 @@ Writing Programs
 
 Python programs have the extension `.py`. To run a program, you can go to the command line and type `python <path to file name>`. This is easier if you use the `cd` command to move to the folder containing the program.
 
-If you write a program like we wrote above, it wouldn't do much. To make a program write output to the command prompt, you need to use the `print()` function. This works by saying `print('stuff you want to say')`. We'll go over how functions work later.
+If you write a program like we wrote above, it wouldn't do much. To make a program write output to the command prompt, you need to use the `print()` function. This works by saying `print('stuff you want to say')`. 
 
 ```python
 print('Hello, world!')
