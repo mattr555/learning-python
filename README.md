@@ -39,7 +39,7 @@ Those commands do what you'd expect. Python also offers a better control of divi
 1
 ```
 
-The `//` is integer division, which returns the integer part of the division (wow)
+The `//` is integer division, which returns the integer part of the division (wow).
 The `%` is called modulo or clock division. It returns the remainder of the division. This means that an easy test for an even number. `number % 2` will return 0 if the number is even, and 1 if the number is odd.
 
 Variables
@@ -63,7 +63,16 @@ What about writing text? This is accomplished using a string. Strings are marked
 ```python
 >>> hello = 'Hello, world!'
 >>> hello
-Hello, world!
+'Hello, world!'
+```
+
+You can put strings together (called concatenation) with the `+` operator.
+
+```python
+>>> hello = 'Hi'
+>>> world = 'World'
+>>> hello + ', ' + world
+'Hi, World'
 ```
 
 So this is cool, but what if you want to write a program and save it?
@@ -75,8 +84,6 @@ Python programs have the extension `.py`. To run a program, you can go to the co
 
 If you write a program like we wrote above, it wouldn't do much. To make a program write output to the command prompt, you need to use the `print()` function. This works by saying `print('stuff you want to say')`. We'll go over how functions work later.
 
-The quotes are not optional. The quotes tell python that what you're saying it meant to be taken literally as a string of text, not as a variable.
-
 ```python
 print('Hello, world!')
 print(5 + 2)
@@ -84,3 +91,12 @@ a = 5 * 2
 print(a)
 ```
 
+Interacting with the user
+=========================
+
+What if we want to take input from the user? We can accomplish this with `input()`. What you put in the parentheses is what the user gets prompted with.
+
+```python
+user_input = input('Type something: ')
+print('You said: ' + user_input)
+```
