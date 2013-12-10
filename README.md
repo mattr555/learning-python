@@ -55,6 +55,30 @@ What if I want to store something for future use? Python does this for you easil
 3
 ```
 
+Variables can be reassigned. They can also be referenced in their own assignments, if they've already been assigned before.
+
+```python
+>>> a = 2
+>>> a = 3
+>>> a
+3
+>>> a = a + 2
+>>> a
+5
+```
+
+There are also operators for doing math and reassigning in place. `+=` adds the number to the variable and sets the variable to the new number. `a += 2` expands to `a = a + 2`. There are similar operators for the other math operations.
+
+```python
+>>> a = 3
+>>> a += 2
+>>> a -= 3
+>>> a /= 2
+>>> a *= 4
+>>> a
+4
+```
+
 Text
 ====
 
