@@ -101,6 +101,8 @@ a = 5 * 2
 print(a)
 ```
 
+What if I want to put a comment in, though? To write text that python shouldn't evaluate, use the hashtag (`#`). Everything after the hashtag on that line will not be evaluated, which allows you to write text that says anything (usually what the line of code does).
+
 Interacting with the user
 =========================
 
@@ -110,3 +112,73 @@ What if we want to take input from the user? We can accomplish this with `input(
 user_input = input('Type something: ')
 print('You said: ' + user_input)
 ```
+
+Booleans
+========
+
+So, up until now, we've been dealing with strings, floats (decimals), integers. But what if we want to say if something is true or false? Enter booleans. To use one, you would type `True` or `False`.
+
+```python
+>>> pie = True
+```
+
+Typing: an aside
+----------------
+
+No, not keyboard typing. Python is "dynamically typed", which means that you don't have to assign the type of a variable every time you want to make one. To look at a type of an object you can use the `type()` function:
+
+```python
+>>> type('a string')
+<class 'str'>
+>>> type(5)
+<class 'int'>
+>>> type(2.5)
+<class 'float'>
+>>> type(True)
+<class 'bool'>
+```
+
+You can also "cast" types. Casting converts the type of one object into another. To convert a string or float into an integer, use the function `int()`
+
+```python
+>>> int('5')
+5
+>>> int(2.5) #this doesn't round
+2
+```
+
+Be careful with this, though! If you try to convert a string that isn't a number into an integer, you will get an exception, or error.
+
+```python
+>>> int('this is not a number')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'this is not a number'
+```
+
+The string representation of any object can be obtained using the `str()` function.
+
+```python
+>>> str(5)
+'5'
+>>> str(True)
+'True'
+```
+
+The boolean value of an object can be obtained using the `bool()` function. Most objects evaluate to True, except for zeros and empty strings.
+
+```python
+>>> bool(5)
+True
+>>> bool(0)
+False
+>>> bool(0.0)
+False
+>>> bool('hello')
+True
+>>> bool('')
+False
+```
+
+Finally, what if we want absolutely nothing? For that, we have `None`. If a function doesn't return anything, it actually returns None. The type of None is `NoneType`, and it evaluates to `False`.
+
