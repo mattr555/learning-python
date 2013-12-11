@@ -3,7 +3,6 @@ learning-python
 
 Syllabus and example code for HTHS's computer club introductory course
 
-
 Welcome to "Learning Python", with Matthew Ramina.
 @mattr555- github, twitter
 
@@ -28,9 +27,11 @@ This makes python a good calculator. The lines that start with `>>>` are lines t
 10
 >>> 5 / 2
 2.5
+>>> 5 ** 2
+25
 ```
 
-Those commands do what you'd expect. Python also offers a better control of division:
+Those commands do what you'd expect (`**` is for exponents). Python also offers a better control of division:
 
 ```python
 >>> 5 // 2
@@ -140,10 +141,74 @@ print('You said: ' + user_input)
 Booleans
 ========
 
-So, up until now, we've been dealing with strings, floats (decimals), integers. But what if we want to say if something is true or false? Enter booleans. To use one, you would type `True` or `False`.
+So, up until now, we've been dealing with strings, floats (decimals), integers. But what if we want to say if something is true or false? Enter booleans. To use one, you would type `True` or `False` (case-sensitive).
 
 ```python
 >>> pie = True
+```
+
+These are kind of boring, though. What if I want to compare numbers? For that, we have boolean operators:
+
+* `==` - tests for equality
+* `>` - greater than
+* `<` - less than
+* `>=` - greater than or equal to
+* `<=` - less than or equal to
+* `!=` - not equal to
+
+For example:
+
+```python
+>>> 4 == 4
+True
+>>> 'hi' == 'hi'
+True
+>>> 4 < 3
+False
+>>> 4 >= 4
+True
+```
+
+Control Flow
+============
+
+So far, our programs only run once, and they only go through one time. Now, lets take a look at code that makes decisions and loops.
+
+`if`
+----
+
+`if` is used when you want to make a decision. You can use a boolean or boolean operator as described above.
+
+```python
+>>> user_input = 'hi'
+>>> if user_input == 'hi':
+...     print('hello there!')
+...
+hello there!
+```
+
+In the above example on the interpreter, you can see that the prompt changed from `>>>` to `...`. The `...` indicates that you're in a block. Blocks are indented one tab or four spaces in.
+
+What if we want to do something when the condition is failed? For this, we have the `else` keyword. It must be used with an `if`.
+
+```python
+user_input = input('say something: ')
+if user_input == 'hi':
+    print('hello there!')
+else:
+    print('you didn\'t say "hi"')
+```
+
+Finally, what if we want to check multiple conditions? We can use `elif`, short for `else if`.
+
+```python
+user_input = input('say something: ')
+if user_input == 'hi':
+    print('hello there!')
+elif user_input == 'hello':
+    print('hai!')
+else:
+    print('that isn\'t something i\'m programmed to respond to')
 ```
 
 Typing: an aside
