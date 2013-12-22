@@ -199,7 +199,7 @@ else:
     print('you didn\'t say "hi"')
 ```
 
-Finally, what if we want to check multiple conditions? We can use `elif`, short for `else if`.
+Finally, what if we want to check multiple conditions? We can use `elif`, short for "else if".
 
 ```python
 user_input = input('say something: ')
@@ -279,6 +279,7 @@ You can also break out of a while loop using the keyword `break`.
 ...         print('hello there!')
 ...         break
 ...     print('I said, say hi!')
+```
 
 Typing: an aside
 ----------------
