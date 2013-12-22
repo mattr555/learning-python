@@ -211,6 +211,75 @@ else:
     print('that isn\'t something i\'m programmed to respond to')
 ```
 
+Both `elif` and `else` are optional, but they must be used with an `if`.
+
+`for`
+-----
+
+`for` is used to iterate through a list. You generally declare a variable to hold the current value of the list. In these examples, I'll use `i` (i is used a lot to signal 'item' or 'index').
+
+```python
+>>> l = [1,2,3]
+>>> for i in l:
+...     print(i)
+...
+1
+2
+3
+```
+
+If you just want a list of integers, though, like the above example, you can use the `range()` function. `range()` can be used in a few ways: if you use one argument `n`, it generates a list of integers from 0 to n-1. If you use two arguments, `m` and `n`, it generates a list of integers from m to n-1. If you use three arguments, `m`, `n`, and `o`, it generates a list of integers from m to n-1, counting by o.
+
+```python
+>>> for i in range(2):
+...     print(i)
+...
+0
+1
+>>> for i in range(3, 5):
+...     print(i)
+...
+3
+4
+>>> for i in range(5, 11, 2):
+...     print(i)
+...
+5
+7
+9
+```
+
+`while`
+-------
+
+`while` is used to do something while a condition is true. It's most simple use case is `while True:`, which will continue to execute until the loop is stopped by the user. To stop execution of a python program, use `Ctrl-C` (`Cmd-C` on macs)
+
+```python
+>>> while True:
+...     print("hello")
+...
+hello 
+hello
+hello
+hello
+hello
+hello
+hello
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyboardInterrupt
+```
+
+You can also break out of a while loop using the keyword `break`.
+
+```python
+>>> while True:
+...     user = input('Say hi: ')
+...     if user == 'hi':
+...         print('hello there!')
+...         break
+...     print('I said, say hi!')
+
 Typing: an aside
 ----------------
 
